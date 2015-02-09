@@ -145,19 +145,19 @@ Transport package: *not required, built-in the NServiceBus core*;
 
 ##### strengths
 
-* _Windows built-in_:;
-* NSB built-in and default;
+* Windows feature (requires enabling) ;
+* NServiceBus built-in and default;
 * DTC support;
 * distributed by nature no Single Point of Failure in the system;
 * Store & forward support
 
 ##### weaknesses
 
-* DTC in heterogeneous network and/or with high latency;
-* Cannot be deployed in the cloud;
-* no scale out support built-in needs the distributor;
-* elevated account to install and create queue(s);
-* does not work with Active Directory integration enabled
+* DTC setup is hard in heterogeneous network and/or with high latency;
+* cannot be deployed in the cloud;
+* no scale-out via competing consumers -- needs the [distributor](../load-balancing-with-the-distributor.md) to manage a pool of worksers;
+* requires elevated priviledge account to install and create queue(s);
+* does not work with MSMQ Active Directory integration feature enabled
 	
 ##### IT/Ops Management tools
 
